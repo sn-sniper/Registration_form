@@ -19,12 +19,13 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: solid 3px #818181;
+    border: solid 3px #5264AE;
     border-radius: 8px;
 }
 .main .header{
     font-family: Montserrat;
     color: #fff;
+    text-shadow: 1px 1px 10px#5162a5;
     text-decoration: underline;
     font-size: 2em;
     font-weight: 600;
@@ -267,3 +268,50 @@ body{
         width: 300px;
     }
 }
+button {
+    width: 10em;
+    position: relative;
+    height: 3.5em;
+    border: 3px ridge #5264AE;
+    outline: none;
+    background-color: transparent;
+    color: white;
+    transition: 1s;
+    border-radius: 0.3em;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #212121;
+    transition: 0.5s;
+    transform-origin: center;
+}
+
+button::before {
+    content: "";
+    transform-origin: center;
+    position: absolute;
+    top: 80%;
+    left: 3%;
+    width: 95%;
+    height: 40%;
+    background-color: #212121;
+    transition: 0.5s;
+}
+
+button:hover::before,
+button:hover::after {
+    transform: scale(0)
+}
+
+button:hover {
+    box-shadow: inset 0px 0px 25px #5264AE;
+}
+
