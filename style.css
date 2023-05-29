@@ -255,3 +255,15 @@ body{
     right: 0;
     width: 0;
 }
+
+@media (min-width:601px){
+    .main{
+        width: 350px;
+    }
+    .wave-group .input{
+        width: 300px;
+    }
+    .wave-group .bar{
+        width: 300px;
+    }
+}
